@@ -14,9 +14,10 @@ print('''
 ''')
 print("Welcome to tresure island")
 print("Hello great adventurer, make your way and to the treasure!\n\n")
-power = 0
+print("This ia my game")
 
-choice1 = input("You see a pathway that splits into directions, do you want to go left, right or middle?\n: ").lower()
+
+choice1 = input("You see a road what to do you do?\n: ").lower()
 if choice1 == "left":
     
     choice2 = input("You walked the path until you saw a river, will you try to swim or jump?: ").lower()
