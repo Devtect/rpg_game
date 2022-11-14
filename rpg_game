@@ -1,0 +1,68 @@
+print('''                         
+                \||/
+                |  @___oo
+      /\  /\   / (__,,,,|
+     ) /^\) ^\/ _)
+     )   /^\/   _)
+     )   _ /  / _)
+ /\  )/\/ ||  | )_)
+<  >      |(,,) )__)
+ ||      /    \)___))
+ | \____(      )___) )___
+  \______(_______;;; __;;;
+
+''')
+print("Welcome to tresure island")
+print("Hello great adventurer, make your way and to the treasure!\n\n")
+power = 0
+
+choice1 = input("You see a pathway that splits into directions, do you want to go left, right or middle?\n: ").lower()
+if choice1 == "left":
+    
+    choice2 = input("You walked the path until you saw a river, will you try to swim or jump?: ").lower()
+elif choice1 == "middle": 
+    power += 5
+    print(f"You have gained +5 strength! Your total strenght is now {power}")
+    choice2 = input("Right next to a fallen tree you have found a sword! This might help you defeat foes! Further down the road you come across a river, will you try to swim or jump over?\n").lower()   
+    if choice2 == "jump":
+        choice3 = input("You successfully jumped over the river, there is a cave in front of you, will you enter or wait?\n").lower()
+        if choice3 == "wait":
+            print("While you were waiting outside the cave, you have been attacked by wild boars and died!")
+        if choice3 == "enter":
+            choice4 = input("You have entered the cave, at the end of the one tunnel you face your final enemy! A huge red dragon! Will you attack it with ice, fire or wind spell?\n").lower()
+            if choice4 == "ice":
+                power += 5
+            elif choice4 == "wind":
+                power += 3
+            elif choice4 == "fire":
+                power -= 3            
+            if power == 10:
+                print(f"Your total strength was {power}! You have defeated the dragon")
+            elif power == 8:
+                print(f"Your total strenght was {power}! The dragon took a little damage and flew away with the treasure!")
+            else:
+                print(f"The dragon reflected the fire damage and killed you!")      
+        else:
+            print("Game over")     
+    elif choice2 == "swim":
+        power += 3
+        print(f"You have gained +3 strength! Your total strenght is now {power}")        
+        choice3 = input("While trying to swim across you find a ring! This will give you power! There is a cave in front of you, will you enter or wait?\n").lower()        
+        if choice3 == "enter":
+            choice4 = input("You have entered the cave, at the end of the one tunnel you face your final enemy! A huge red dragon! Will you attack it with ice, fire or wind spell?\n").lower()
+            if choice4 == "ice":
+                power += 2
+            elif choice4 == "wind":
+                power += 0
+            elif choice4 == "fire":
+                power -= 3            
+            if power == 10:
+                print(f"Your total strength was {power}! You have defeated the dragon")
+            elif power == 8:
+                print(f"Your total strenght was {power}! The dragon took a little damage and flew away with the treasure!")
+            else:
+                print(f"The dragon reflected the fire damage and killed you!")      
+        else:
+            print("Game over")            
+else:
+    print("Game over")
