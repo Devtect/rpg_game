@@ -16,6 +16,7 @@ print("Welcome to tresure island")
 print("Hello great adventurer, make your way and to the treasure!\n\n")
 print("This ia my game")
 
+power = 0
 
 choice1 = input("You see a road what to do you do?\n: ").lower()
 if choice1 == "left":
